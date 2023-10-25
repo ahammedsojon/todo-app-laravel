@@ -1,0 +1,85 @@
+.todos-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: auto;
+    .todos{
+        max-height: 500px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 700px;
+        padding: 30px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        .heading-title{
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        form{
+            .form-group{
+                display: flex;
+                align-items: center;
+                input{
+                    padding: 10px;
+                    flex: 1 1 auto;
+                    margin-right: 10px;
+                    outline: none;
+                }
+                .btn{
+                    padding: 10px 20px;
+                    cursor: pointer;
+                }
+            }
+            .error-report{
+                font-size: 12px;
+                margin-top: 5px;
+                color: red;
+            }
+        }
+        .todo-list{
+            margin-top: 30px;
+            .todo{
+                display: flex;
+                align-items: center;
+                background-color: #f2f2f2;
+                padding: 10px 20px;
+                border-radius: 8px;
+                margin-bottom: 10px;
+                .title{
+                    flex:  1 1 auto;
+                    &.complete{
+                        text-decoration: line-through;
+                    }
+                }
+                .actions{
+                    margin-left: 20px;
+                    .btn{
+                        margin-right: 5px;
+                        padding: 5px;
+                        font-size: 16px;
+                        cursor: pointer;
+                        &:last-child{
+                            margin-right: 0;
+                        }
+                        &.edit{
+                            color: dodgerblue;
+                        }
+                        &.delete{
+                            color: firebrick;
+                        }
+                        &.complete{
+                            color: forestgreen;
+                        }
+                        &.not-complete{
+                            color: coral;
+                        }
+                    }
+                }
+            }
+            .not-found{
+                text-align: center;
+            }
+        }
+    }
+}
